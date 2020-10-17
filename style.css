@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(to right, #B1D8F2, #038CE5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano {
+    display: flex;
+}
+
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+    border-radius: 3px;
+}
+
+.key--white {
+    --width: 10rem;
+    background-color: #fff;
+    border: 1px solid #D2D2D2;
+}
+
+.key--white.active {
+    background-color: #ccc;
+}
+
+.key--black {
+    --width: 6rem;
+    background-color: #000;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 5;
+}
+
+.key--black.active {
+    background-color: #333;
+}
+
